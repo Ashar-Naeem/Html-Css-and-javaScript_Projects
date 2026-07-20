@@ -1,0 +1,60 @@
+const quotes = [
+  "Success is the sum of small efforts repeated day in and day out.",
+  "Believe in yourself and all that you are.",
+  "Dream big, work hard, stay focused.",
+  "Every expert was once a beginner.",
+  "Do something today that your future self will thank you for.",
+  "Discipline beats motivation.",
+  "Failure is not the opposite of success; it is part of success.",
+  "Small progress is still progress.",
+  "Your only limit is your mind.",
+  "The best way to predict the future is to create it.",
+  "Hard work always pays off.",
+  "Stay positive, work hard, and make it happen.",
+  "Don't wait for opportunity. Create it.",
+  "Success begins with self-belief.",
+  "Great things take time.",
+  "Keep going. Everything you need will come to you at the right time.",
+  "Never stop learning.",
+  "Consistency is more important than perfection.",
+  "Mistakes are proof that you are trying.",
+  "Push yourself because no one else is going to do it for you.",
+  "Difficult roads often lead to beautiful destinations.",
+  "Stay hungry. Stay foolish.",
+  "Your future depends on what you do today.",
+  "The harder you work, the luckier you get.",
+  "Don't be afraid to start over. It's a chance to build something better.",
+  "Success comes to those who never quit.",
+  "Focus on progress, not perfection.",
+  "Turn your dreams into plans and your plans into reality.",
+  "A little progress each day adds up to big results.",
+  "Be stronger than your excuses.",
+  "Confidence comes from preparation.",
+  "The journey of a thousand miles begins with a single step.",
+  "Don't compare yourself to others. Compare yourself to yesterday.",
+  "Action is the foundation of success.",
+  "Learn from yesterday, live for today, hope for tomorrow.",
+  "Patience and persistence make an unbeatable combination.",
+  "You miss 100% of the shots you don't take.",
+  "The secret of getting ahead is getting started.",
+  "Stay committed to your goals.",
+  "Don't let fear decide your future.",
+  "Success is earned, not given.",
+  "Every day is a new chance to improve yourself.",
+  "Your attitude determines your direction.",
+  "Work in silence and let success make the noise.",
+  "Nothing worth having comes easy.",
+  "Be proud of how far you've come.",
+  "The only way to do great work is to love what you do.",
+  "Start where you are. Use what you have. Do what you can.",
+  "Never give up on something you truly want.",
+  "Today's effort is tomorrow's achievement."
+];
+
+const button=document.querySelector("button");
+const display=document.querySelector("h1");
+
+button.addEventListener("click",()=>{
+    const index= Math.floor(Math.random()*50);
+    display.textContent=quotes[index];
+})
