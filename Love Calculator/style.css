@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#parent{
+    border: white 2px solid;
+    background-color: rgb(83, 83, 81);
+    padding: 20px;
+}
