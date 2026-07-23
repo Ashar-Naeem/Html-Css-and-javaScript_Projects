@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(7, 137, 7);
+    color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box{
+    padding: 10px;
+    border: 2px black solid;
+    background-color: rgb(214, 211, 211);
+    border-radius: 20px;
+}
