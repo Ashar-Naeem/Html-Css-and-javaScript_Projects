@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box{
+    padding: 15px;
+    border: white 1px solid;
+    border-radius: 20px;
+}
+#inputtext{
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+}
+#add{
+    margin-left: 10px;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    font-size: 20px;
+}
