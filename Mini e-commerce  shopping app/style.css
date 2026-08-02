@@ -1,0 +1,27 @@
+.box{
+    border: 1px solid black;
+    padding: 15px;
+    height: 200px;
+    width: 200px;
+}
+.image{
+    width: 100%;
+    height: 80px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart
+{
+    position: absolute;
+    top: 50px;
+}  
