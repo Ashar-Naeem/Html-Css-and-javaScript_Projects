@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 70%, #090d16 100%);
+    min-height: 100vh;
+    color: #f8fafc;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Container Styling */
+form {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 36px 32px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 48px;
+    animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form h1 {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 14px 18px;
+    color: #f8fafc;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+form select option {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+    background: rgba(15, 23, 42, 0.85);
+}
+
+#addButton {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    border: none;
+    border-radius: 14px;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px -4px rgba(99, 102, 241, 0.5);
+}
+
+#addButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -4px rgba(99, 102, 241, 0.7);
+    filter: brightness(1.08);
+}
+
+#addButton:active {
+    transform: translateY(0);
+}
+
+#totalExpense {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 14px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    letter-spacing: 0.2px;
+}
+
+/* Expenses Container Layout */
+.container {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Expense Card Styling */
+.box {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 12px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: cardPop 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardPop {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+.box p {
+    width: 100%;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Title Paragraph */
+.box p:nth-child(1) {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    word-break: break-word;
+}
+
+/* Amount Paragraph */
+.box p:nth-child(2) {
+    font-size: 22px;
+    font-weight: 800;
+    color: #4ade80;
+    letter-spacing: -0.5px;
+}
+
+/* Category Paragraph */
+.box p:nth-child(3) {
+    width: auto;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #c084fc;
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+/* Buttons inside Expense Card */
+.box button {
+    flex: 1;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
+
+/* Delete Button (First Button) */
+.box button:nth-of-type(1) {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.box button:nth-of-type(1):hover {
+    background: #ef4444;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Edit Button (Second Button) */
+.box button:nth-of-type(2) {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.box button:nth-of-type(2):hover {
+    background: #3b82f6;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+}
+
+.box button:active {
+    transform: translateY(0);
+}
