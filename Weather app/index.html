@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Wheather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search-input">
+                <input type="text" class="input-box" placeholder="Enter Location">  
+            </div>
+            <div class="search-button">
+                <button type="button" id="search_btn" class="fa-solid fa-magnifying-glass"></button>
+            </div>
+        </div>
+        <div class="wheather-body">
+            <div class="wheather-image">
+                <img src="./assets/cloud.png" alt="cloud">
+            </div>
+            <div class="temperature">
+                <h2 class="wheather-temp">20°C</h2>
+            </div>
+            <div class="description">
+                <h2 class="wheather-description">Cloudy</h2>
+            </div>
+
+            <div class="detail">
+                <div class="humidity-box">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <span class="wheather-humidity">23%</span>
+                    <p>Humidity</p>
+                </div>
+                <div class="windspeed-box">
+                    <i class="fa-solid fa-wind"></i>
+                    <span class="wheather-windspeed">23Km/h</span>
+                    <p>Windspeed</p>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    
+
+</body>
+</html>

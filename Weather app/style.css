@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body{
+    background-color: black;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    width: 400px;
+    height: min-content;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.input-box{
+    height: 46px;
+    width: 300px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: larger;
+}
+.input-box::placeholder
+{
+    font-size: medium;
+}
+button{
+    width: 46px;
+    height: 46px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+.wheather-body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    margin-left: 100px;
+    width:45%;
+}
+.temperature{
+    margin-top: 10px;
+}
+.temperature h2{
+    font-weight: 900;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+    margin-block: 20px;
+}
+
+.humidity-box{
+    padding-right: 150px;
+} 
+span{
+    font-weight: 600;
+    font-size: large;
+}
